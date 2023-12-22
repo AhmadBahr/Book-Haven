@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .popular{
     display:flex;
     flex-direction: column;
@@ -21,7 +21,8 @@
     margin-top: 50px;
     display: flex;
     gap: 30px;
-=======
+}
+
 .popular{
     display: flex;
     flex-direction: column;
@@ -44,5 +45,4 @@
     margin-top: 50px;
     display: flex;
     gap: 30px;
->>>>>>> 78f4f7c3525f0fbde691745bd9743d511f89ece8
 }
