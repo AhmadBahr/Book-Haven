@@ -29,6 +29,7 @@ function App() {
           </Route>
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<LoginSignup />} />
+          <Route path="/signup" component={LoginSignup} />
         </Routes>
         <Footer/>
       </BrowserRouter>
