@@ -52,12 +52,22 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <hr/>
-      <div className="footer-copyright">
-        <hr />
-        <p>Copyright @ 2023 - All Rights Reserved</p>
-      </div>
+      <div className="footer-copyright-method">
+  <hr />
+  <p>Copyright @ 2023 - All Rights Reserved</p>
+  <div className="footer-copyright-method payment-methods-container">
+    <h1>Payment Methods</h1>
+    <div className="payment-methods">
+      <img src="money_icon_url" alt="Money" />
+      <img src="western_union_icon_url" alt="Western Union" />
+      <img src="visa_icon_url" alt="Visa" />
+      <img src="mastercard_icon_url" alt="Mastercard" />
+      <img src="discover_icon_url" alt="Discover Network" />
+      <img src="american_express_icon_url" alt="American Express" />
     </div>
+  </div>
+</div>
+</div>
   );
 };
 
