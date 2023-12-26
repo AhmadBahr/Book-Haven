@@ -51,3 +51,36 @@
     height: 3px;
     background: #c7c7c7;
 }
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sub-links {
+    padding-left: 20px;
+  }
+  
+  .sub-links li {
+    list-style-type: none;
+  }
+  
+  .social-media-icons {
+    display: flex;
+  }
+  
+  .footer-icons-container {
+    margin-right: 10px;
+  }
+  
+  .phone-numbers {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .phone-numbers li {
+    color:purple;
+    text-decoration: underline;
+    margin-bottom: 5px;
+  }
