@@ -1,74 +1,99 @@
-import React from 'react';
-import './Footer.css';
-import footer_logo from '../Assets/logo_big.png';
+import React from 'react'
+import './Footer.css'
+import facebook_icon from '../Assets/facebook_icon.jpg'
+import instagram_icon from '../Assets/instagram_icon.png'
+import pinterest_icon from '../Assets/pintester_icon.png'
+import twitter_icon from '../Assets/twitter_icon.png'
+import american_express_logo from '../Assets/amex.256x164.png'
 
-
-export const Footer = () => {
+const Footer = () => {
   return (
-    <div className='footer'>
-      <br/><br/>
-      <div className="footer-logo">
-        <img src={footer_logo} alt="" />
-      </div>
-      <div className="footer-links">
-        <div className="customer-section">
-          <p>CUSTOMER</p>
-          <ul className="sub-links">
-            <li>Log In</li>
-            <li>My Account</li>
-            <li>Terms and Conditions</li>
-          </ul>
-        </div>
-        <div className="quick-links">
-          <p>QUICK LINKS</p>
-          <ul className="sub-links">
-            <li>Explore Books</li>
-            <li>About Asala</li>
-            <li>View Catalog</li>
-          </ul>
-        </div>
-        <p>SOCIAL MEDIA</p>
-        <div className="social-media-icons">
-          <div className="footer-icons-container">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3-PwlexbeDW56TRqSrv86oQ7GGzrAUYJCNr3ihi0cK1H6gkoorAHNAnr67rLlddJc5VI&usqp=CAU" alt="Facebook" />
+    <div className="footer">
+      <div className="sb__footer section__padding">
+        <div className="sb__footer-links">
+          <div className="sb__footer-links_div">
+            <h4>CUSTOMER</h4>
+            <a href="/Login / Register">
+            <p>Login / Register</p>
+            </a>
+            <a href="/My Acount">
+            <p>My Account</p>
+            </a>
+            <a href="/Terms & Condtions">
+            <p>Terms & Conditions</p>
+            </a>
           </div>
-          <div className="footer-icons-container">
-            <img src="https://static-00.iconduck.com/assets.00/instagram-rounded-filled-icon-2047x2048-sc0zywj5.png" alt="Instagram" />
+          <div className="sb__footer-links_div">
+            <h4>QUICK LINKS</h4>
+            <a href="/Explore Books">
+            <p>Explore Books</p>
+            </a>
+            <a href="/About Asala">
+            <p>About Asala</p>
+            </a>
+            <a href="/View Catalog">
+            <p>View Catalog</p>
+            </a>
           </div>
-          <div className="footer-icons-container">
-            <img src="https://www.svgrepo.com/show/332182/twitter-circle.svg" alt="Twitter" />
-          </div>
-          <div className="footer-icons-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/80/80648.png" alt="Pinterest" />
-          </div>
-        </div>
-        <div className="quick-links">
-          <p>Call US</p>
-          <ul className="sub-links">
-            <li>Beirut:</li>
-            <p>+9611 83 3217</p>
-            <li>Istanbul:</li>
-            <p>+931 1 83 32 17</p>
-          </ul>
-        </div>
-      </div>
-      <div className="footer-copyright-method">
-  <hr />
-  <p>Copyright @ 2023 - All Rights Reserved</p>
-  <div className="footer-copyright-method payment-methods-container">
-    <h1>Payment Methods</h1>
-    <div className="payment-methods">
-      <img src="money_icon_url" alt="Money" />
-      <img src="western_union_icon_url" alt="Western Union" />
-      <img src="visa_icon_url" alt="Visa" />
-      <img src="mastercard_icon_url" alt="Mastercard" />
-      <img src="discover_icon_url" alt="Discover Network" />
-      <img src="american_express_icon_url" alt="American Express" />
-    </div>
-  </div>
-</div>
-</div>
-  );
-};
+          <div className="sb__footer-links_div">
+            <h4>Social Media</h4>
+            <div className="socialmedia">
+            <p><img src={facebook_icon} alt="" style={{ width: '30px', height: '30px' }} /></p>
+            <p><img src={pinterest_icon} alt="" style={{ width: '30px', height: '30px' }} /></p>
+            <p><img src={instagram_icon} alt="" style={{ width: '30px', height: '30px' }} /></p>
+            <p><img src={twitter_icon} alt="" style={{ width: '30px', height: '30px' }} /></p>
 
-export default Footer;
+            </div>
+          </div>
+          <div className="sb__footer-links__div">
+            <h4>CONTACT US</h4>
+            <a href="/about">
+            <p>About</p>
+            </a>
+            <a href="/press">
+            <p>Press</p>
+            </a>
+            <a href="/career">
+            <p>Career</p>
+            </a>
+            <a href="/Contact">
+            <p>Contact</p>
+            </a>
+          </div>
+          <div className="sb__footer-links__div">
+          <h4>CALL US</h4>
+          <a href="/Beirut">
+            <p style={{ color: 'purple', textDecoration: 'underline' }}>Beirut</p>
+            <p style={{ color: 'purple', textDecoration: 'underline' }}>+961 1 83 32 17</p>
+          </a>
+          <a href="/Istanbul">
+            <p style={{ color: 'purple', textDecoration: 'underline' }}>Istanbul</p>
+            <p style={{ color: 'purple', textDecoration: 'underline' }}>+961 1 83 32 17</p>
+          </a>
+        </div>
+        </div>
+
+        <hr style={{ color: 'grey', margin: '10px 0' }} />
+
+        <div className="sb__footer-below">
+          <div className="sb__footer-copyright">
+            <p>
+              Copyright &#169; {new Date().getFullYear()} Asala Publishers. All rights reserved
+            </p>
+          </div>
+          <div className="sb__footer-below-links">
+            <a href="/Payment"><p>Payment</p></a>
+            <img src="https://asalapublishers.com/assets/img/f1.svg" alt="MoneyGram Logo" />
+            <img src="https://asalapublishers.com/assets/img/f2.svg" alt="Western Union Logo" />
+            <img src="https://asalapublishers.com/assets/img/f3.svg" alt="Visa Logo" />
+            <img src="https://asalapublishers.com/assets/img/f4.svg" alt="MasterCard Logo" />
+            <img src="https://asalapublishers.com/assets/img/f5.svg" alt="Discover Logo" />
+            <img src={american_express_logo} alt="American Express Logo" style={{ width: '40px', height: 'auto' }} />
+          </div>
+          </div>
+        </div>
+      </div>
+  )
+}
+
+export default Footer

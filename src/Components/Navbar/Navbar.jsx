@@ -33,7 +33,7 @@ const AdditionalNavbar = () => {
 
 export const Navbar = () => {
   const [menu, setMenu] = useState('Shop');
-  const { getT } = useContext(ShopContext);
+  const { getTotalCartItems } = useContext(ShopContext);
 
   return (
     <>
@@ -71,7 +71,7 @@ export const Navbar = () => {
         <div className="nav-login-cart">
           <Link to='/login'><button>Login</button></Link>
           <Link to='/cart'><img src={cart_icon} alt="" /></Link>
-          <div className="nav-cart-count">{0}</div>
+          <div className="nav-cart-count">{getTotalCartItems()}</div>
           <img src="https://t4.ftcdn.net/jpg/03/42/99/71/360_F_342997143_wz7x1yR7KWhmhSKF9OHwuQ2W4W7IUDvH.jpg" alt="Profile" style={{ width: '50px', height: '50px' }} />
         </div>
       </div>
