@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../Pages/CSS/LoginSignup.css';
 
 const LoginSignup = () => {
-  return (
+  return (<>
     <div className='loginsignup'>
       <div className="loginsignup-container">
       <img src={"https://asalapublishers.com/assets/img/logo.png" } alt="Logo" />
@@ -41,7 +40,6 @@ const LoginSignup = () => {
             <label htmlFor="lastName">Last Name</label>
             <input type="text" id="lastName" placeholder='' />
           </div>
-
           <div>
             <label htmlFor="phoneNumber">Phone Number</label>
             <input type="text" id="phoneNumber" placeholder='+961 &#8595;' />
@@ -71,12 +69,16 @@ const LoginSignup = () => {
             <label htmlFor="confirmPassword">Confirm Password</label>
             <input type="password" id="confirmPassword" placeholder='' />
           </div>
+          <button>Create Account</button>
         </div>
-        <button>Create Account</button>
-      </div>
-      <div className="footer">
       </div>
     </div>
+    <div className="footerContainer">
+      <div className='bg-5'>
+      <img src="https://asalapublishers.com/assets/img/shadow.svg" alt=""/>
+      </div>
+      </div>
+      </>
   );
 }
 

@@ -1,71 +1,77 @@
 .loginsignup {
-    width: 100%;
-    height: 80vh;
-    background: #fce3fe;
-    padding-top: 100px;
-  }
-  
-  .loginsignup-container {
-    width: 580px;
-    height: 600px;
-    background: white;
-    margin: auto;
-    padding: 40px 60px;
-  }
-  
-  .loginsignup-logo img {
-    width: 100px; 
-    height: 100px; 
-    margin-bottom: 20px;
-  }
-  
-  .loginsignup-container h1 {
-    margin: 20px 0px;
-  }
-  
-  .loginsignup-fields {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .loginsignup-fields label {
-    font-size: 18px;
-    font-weight: 500;
-    color: #5c5c5c;
-  }
-  
-  .loginsignup-fields input {
-    height: 45px;
-    width: 100%;
-    padding-left: 20px;
-    border: 1px solid #c9c9c9;
-    border-radius: 10px; 
-    outline: none;
-    color: #5c5c5c;
-    font-size: 16px;
-  }
-  
-  .loginsignup-container button {
-    width: 150px;
-    height: 50px; 
-    color: white;
-    background: #CC2448;
-    margin-top: 20px;
-    border: none;
-    border-radius: 10px; 
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-  }
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+  background: white;
+}
+
+.loginsignup-container {
+  width: 30%;
+  background: white;
+  padding: 40px 60px;
+}
+
+.loginsignup-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.loginsignup-fields label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #5c5c5c;
+}
+
+.loginsignup-fields input {
+  height: 45px;
+  width: 75%; 
+  padding-left: 20px;
+  border: 1px solid #c9c9c9;
+  border-radius: 20px;
+  outline: none;
+  color: #5c5c5c;
+  font-size: 16px;
+}
+
+.loginsignup-login {
+  margin-top: 15px;
+  color: rgba(204, 36, 72, 0.7);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.loginsignup-agree {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 20px;
+  color: #5c5c5c;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.loginsignup-container button {
+  width: 150px;
+  height: 50px;
+  color: white;
+  background: #CC2448;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
   
   .loginsignup-login {
     margin-top: 15px;
     color: #CC2448;
     font-size: 15px;
     font-weight: 500;
-    margin-left: 400px;
+    margin-left: 250px;
   }
   
 
@@ -74,7 +80,7 @@
     color: rgba(204, 36, 72, 0.7);
     font-size: 15px;
     font-weight: 500;
-    margin-left: 400px;
+    margin-right: 400px;
   }
   
   
@@ -86,6 +92,7 @@
     color: #5c5c5c;
     font-size: 16px;
     font-weight: 500;
+    border-radius: 20px;
   }
    
 
@@ -96,24 +103,26 @@
   }
   
   .create-account-container {
-    width: 580px;
+    width: 70%;
     height: 600px;
     background-image:url(https://asalapublishers.com/assets/img/About_03.jpg);
     background-size: cover;
     background-position: center; 
     margin: auto;
-    padding: 40px 60px;
+    padding: 110px 60px;
   }
   
   .create-account-container h1 {
+    color: white;
     margin: 20px 0px;
   }
   
   .create-account-fields {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 30px; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px; 
     margin-top: 20px;
+
   }
   
   .create-account-fields div {
@@ -131,43 +140,34 @@
   
   .create-account-fields input {
     height: 45px;
-    width: 100%;
+    width: 75%;
     padding-left: 20px;
     border: 1px solid #c9c9c9;
-    border-radius: 10px;
+    border-radius: 20px;
     outline: none;
     color: #5c5c5c;
     font-size: 16px;
     background-color: transparent;
+    gap: 50px;
+    display: grid;
+    padding: 0px 15px;
   }
   
-
   .create-account-container button {
-    width: 150px; 
-    height: 40px; 
+    width: 200px; 
+    height: 60px; 
     color: white;
     background: #CC2448;
-    margin-top: 20px;
-    margin-right: auto; 
+    margin: 10px;
+    margin: 20px;
+    margin-top: -35px;
     display: block;
     border: none;
-    border-radius: 10px;
-    font-size: 16px; 
+    border-radius: 30px;
+    font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-  }
-  
+}
   .create-account-container button:hover {
     background: #a82242;
-  }
-
-.footer {
-    background-image: url('https://asalapublishers.com/assets/img/shadow.svg');
-    background-size: 20px 10px;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .footer img {
-    display: none; 
   }
