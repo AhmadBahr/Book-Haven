@@ -3,22 +3,19 @@ import './Navbar.css';
 import cart_icon from '../Assets/cart_icon.png';
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../Context/ShopContext';
-import facebook_icon from '../Assets/facebook_icon.png';
-import instagram_icon from '../Assets/instagram_icon.png';
-import pinterest_icon from '../Assets/pintester_icon.png';
-import twitter_icon from '../Assets/twitter.png';
-import phone_icon from '../Assets/phone_icon.png';
-import hamburger_icon from '../Assets/hamburger_icon.png';
-import search_icon from '../Assets/search_icon.jpg'
-import arabi21_icon from '../Assets/arabi21_icon.jpg'
-import globe_icon from '../Assets/globe_icon.png'
-import down_icon from '../Assets/down_icon.png'
+import hamburger_icon from '../Assets/hamburger_icon.svg'
+import arabi21_icon from '../Assets/arabi_icon.png'
+import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import LanguageIcon from '@mui/icons-material/Language';
+import SearchIcon from '@mui/icons-material/Search';
+
 
 const AdditionalNavbar = () => {
   return (
-    <div className="additional-navbar" style={{ background: 'grey', padding: '5px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-      <div style={{ color: 'white', padding: '1px', fontSize: '12px' }}>Welcome to Our Publishing House!</div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+    <div className="additional-navbar" style={{ background: '#D3D3D3', padding: '5px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div style={{ color: '#D3D3D3', padding: '1px', fontSize: '12px' }}>Welcome to Our Publishing House!</div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
         <div to='/facebook'>
         <svg xmlns="http://www.w3.org/2000/svg" height="18" width="9" viewBox="0 0 320 512"><path fill="#484847" d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
         </div>
@@ -31,13 +28,12 @@ const AdditionalNavbar = () => {
         <div to='/pinterest'>
         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 384 512"><path fill="#484847" d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"/></svg>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#c60a45' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: 'dark-grey' }}>
           <br />
-          <img src={phone_icon} alt="Call Us" style={{ width: '20px', height: '20px' }} />
+          <PhoneInTalkIcon style={{ filter: 'brightness(60%)', width: '20px' }} />
           <br></br>
-          <span style={{ color: '#363636',fontFamily:'Arial' }}>Call us:</span>
-<         span style={{ color: '#cc2448', fontWeight: 'bold' }}>961 1 83 32 17</span>
-
+          <span style={{ color: '#d3d3d3',fontFamily:'Arial' }}>Call us:</span>
+          <span style={{ color: '#cc2448', fontWeight: 'bold' }}>961 1 83 32 17</span>
         </div>
       </div>
     </div>
@@ -83,26 +79,25 @@ export const Navbar = () => {
         <Link to='/login'><button>Login</button></Link>
         <div className="nav-icons">
           <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#c60a45' }}>
-
-            <img src={globe_icon} alt="Globe" style={{ width: '20px', height: '20px', marginLeft: '5px', marginRight: '5px' }} />
-
-            <span style={{ color: 'grey' }}>Arabic</span>
-            <img src={down_icon} alt="Down Arrow" style={{ width: '20px', height: '20px', marginLeft: '5px', marginRight: '5px' }} />
-
-            <img src={search_icon} alt="Search" style={{ width: '20px', height: '20px', marginLeft: '5px', marginRight: '2px' }} />
-
-            <span style={{ height: '20px' }}>|</span>
+              <LanguageIcon style={{ color: 'grey' }}/>
+              <span style={{ color: 'grey' }}>Arabic</span>
+              <ArrowDropDownIcon style={{ color: 'grey' }} />
+            <SearchIcon style={{color:'grey'}}/>
+          <span style={{ height: '50px', color:'grey', fontSize:'30px' }}>&#124;</span>
           </div>
         </div>
-        
         <Link to='/cart'><img src={cart_icon} alt="Cart" style={{ width: '40px', height: '40px', marginLeft: '5px', marginRight: '5px' }} /></Link>
         <div className="nav-cart-count">{getTotalCartItems()}</div>
-        <img src="https://t4.ftcdn.net/jpg/03/42/99/71/360_F_342997143_wz7x1yR7KWhmhSKF9OHwuQ2W4W7IUDvH.jpg" alt="Profile" style={{ width: '50px', height: '50px' }} />
+        <Link to='/profile'> 
+            <img
+              src="https://t4.ftcdn.net/jpg/03/42/99/71/360_F_342997143_wz7x1yR7KWhmhSKF9OHwuQ2W4W7IUDvH.jpg"
+              alt="Profile"
+              style={{ cursor: 'pointer', width: '50px', height: '50px' }}
+            />
+            </Link>
       </div>
-
       </div>
     </>
   );
 };
-
 export default Navbar;
