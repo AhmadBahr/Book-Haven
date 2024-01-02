@@ -54,7 +54,7 @@ const ContactUs = () => {
   };
 
   const sendMessageTextStyle = {
-    fontSize: '20px', 
+    fontSize: '27px', 
     fontWeight: 'bold',
     marginBottom: '20px',
   };
