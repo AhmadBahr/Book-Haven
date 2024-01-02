@@ -3,13 +3,12 @@ import './Navbar.css';
 import cart_icon from '../Assets/cart_icon.png';
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../Context/ShopContext';
-import hamburger_icon from '../Assets/hamburger_icon.svg'
-import arabi21_icon from '../Assets/arabi_icon.png'
-import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+import hamburger_icon from '../Assets/hamburger_icon.png';
+import arabi21_icon from '../Assets/arabi21_icon.jpg'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import LanguageIcon from '@mui/icons-material/Language';
 import SearchIcon from '@mui/icons-material/Search';
-
+import PhoneInTalkOutlinedIcon from '@mui/icons-material/PhoneInTalkOutlined';
 
 const AdditionalNavbar = () => {
   return (
@@ -30,9 +29,9 @@ const AdditionalNavbar = () => {
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: 'dark-grey' }}>
           <br />
-          <PhoneInTalkIcon style={{ filter: 'brightness(60%)', width: '20px' }} />
+          <PhoneInTalkOutlinedIcon style={{ filter: 'brightness(60%)', width: '20px' }} />
           <br></br>
-          <span style={{ color: '#d3d3d3',fontFamily:'Arial' }}>Call us:</span>
+          <span style={{ color: '#grey',fontFamily:'Arial' }}>Call us:</span>
           <span style={{ color: '#cc2448', fontWeight: 'bold' }}>961 1 83 32 17</span>
         </div>
       </div>
