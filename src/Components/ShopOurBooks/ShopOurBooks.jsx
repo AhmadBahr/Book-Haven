@@ -10,58 +10,71 @@ import tiffany_icon from '../Assets/tiffany_icon.jpg'
 import felix_icon from '../Assets/felix_icon.jpg'
 import lobizona_icon from '../Assets/lobi_zona.jpg'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import shadow from '../Assets/shadow_icon.svg'
 
 
 const ProductCard = ({ name, description, imageUrl, price }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isAddedToCart, setIsAddedToCart] = useState(false);
-	const handleAddToCart = () => {
 
+  const handleAddToCart = () => {
     setIsAddedToCart(true);
+  };
 
-  <div style={{ width: '250px', height: '400px', marginBottom: '20px', borderRadius: '10px', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', position: 'relative',
-	boxShadow: isHovered ? '0 4px 8px rgba(0, 0, 0, 0.1)' : 'none', }}>
-		 onMouseEnter={() => setIsHovered(true)}
+  return (
+    <div
+      style={{
+        width: '250px',
+        height: '400px',
+        marginBottom: '20px',
+        borderRadius: '10px',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        boxShadow: isHovered ? '0 4px 8px rgba(0, 0, 0, 0.1)' : 'none',
+      }}
+      onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-    <div>
+    > 
       <img src={imageUrl} alt={name} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '10px' }} />
       <h4 style={{ textAlign: 'center', margin: '10px 0' }}>Helium</h4>
       <p style={{ textAlign: 'center', margin: '0 10px' }}>Candy Carson</p>
-      <p style={{ color: '#CC2448', fontSize: '18px', textAlign: 'center', marginTop: '10px' }}>$6.00</p>
-			
-			{isHovered && !isAddedToCart && (
-          <button
-            onClick={handleAddToCart}
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              background: '#E01F20',
-              color: 'white',
-              border: 'none',
-              borderRadius: '5px',
-              padding: '10px',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <ShoppingCartIcon style={{ marginRight: '5px' }} /> Add to Cart
-          </button>
-        )}
-        {isAddedToCart && (
-          <p style={{ position: 'absolute', bottom: '10px', left: '50%', transform: 'translateX(-50%)' }}>
-            Added to Cart!
-          </p>
-        )}
-      </div>
+      <p style={{ color: '#CC2448', fontSize: '18px', textAlign: 'center', marginTop: '10px' }}>{`$6.00`}</p>
+
+      {isHovered && !isAddedToCart && (
+        <button
+          onClick={handleAddToCart}
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            background: '#CC2448',
+            color: 'white',
+            borderRadius: '25px',
+            padding: '10px',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            border: '2px solid #CC2448',
+          }}
+        >
+          <ShoppingCartIcon style={{ marginRight: '5px' }} /> Add to Cart
+        </button>
+      )}
+      {isAddedToCart && (
+        <p style={{ position: 'absolute', bottom: '10px', left: '50%', transform: 'translateX(-50%)' }}>
+          Added to Cart!
+        </p>
+      )}
     </div>
-};
+  );
 };
 
-
-const ShopOurBooks = () => {
+  const ShopOurBooks = () => {
   const [showCategories, setShowCategories] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState([]);
 
@@ -82,6 +95,13 @@ const ShopOurBooks = () => {
     }
 
     setSelectedCategories(updatedCategories);
+  };
+
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
   const containerStyle = {
@@ -171,6 +191,48 @@ const ShopOurBooks = () => {
   	lobizona_icon,
 ];
 
+const paginationContainerStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginTop: '20px',
+  marginLeft:'240px',
+};
+
+const paginationCircleStyle = {
+  width: '30px',
+  height: '30px',
+  borderRadius: '50%',
+  border: '2px solid white',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  margin: '0 5px',
+  cursor: 'pointer',
+};
+
+const activePaginationStyle = {
+  backgroundColor: '#CC2448',
+  color: '#fff',
+};
+
+const paginationButtonStyle = {
+  margin: '0 -1px',
+  padding: '15px 15px',
+  cursor: 'pointer',
+  borderRadius: '25px',
+  backgroundColor: '#E8E8E8',
+  border: 'none',
+};
+
+const footerImageStyle = {
+  position: 'relative',
+  bottom: '-62px',
+  left: '-19%',
+  transform: 'translateX(-50%)',
+  width: '394%',
+  marginTop: '20px',
+};
 
 
   return (
@@ -314,7 +376,7 @@ const ShopOurBooks = () => {
 )}
      </div>
     </div>
-<hr/>
+
 
 <div style={{ ...productContainerStyle, ...upperProductContainerStyle }}>
         {[1, 2, 3, 4].map((product, index) => (
@@ -322,7 +384,7 @@ const ShopOurBooks = () => {
             key={product}
             name={`Product ${product}`}
             description={`Description for Product ${product}`}
-            price={9.99 * product}
+            price={6.00 * product}
             imageUrl={productImages[index]}
           />
         ))}
@@ -334,14 +396,43 @@ const ShopOurBooks = () => {
             key={product}
             name={`Product ${product}`}
             description={`Description for Product ${product}`}
-            price={9.99 * product}
+            price={6.00 * product}
             imageUrl={productImages[index]}
           />
         ))}
-      </div>
 
-      </div>
+        <br/><br/> <br/><br/>
 
+        <div style={paginationContainerStyle}>
+  {[1, 2, 3].map((page) => (
+    <div
+      key={page}
+      style={{
+        ...paginationCircleStyle,
+        ...(currentPage === page ? activePaginationStyle : {}),
+        ...(page > 1 ? { borderRadius: '0' } : {}),
+      }}
+      onClick={() => handlePageChange(page)}
+    >
+      {page}
+    </div>
+  ))}
+  <button
+    onClick={() => handlePageChange(currentPage + 1)}
+    disabled={currentPage === 3}
+    style={paginationButtonStyle}
+  >
+    Next
+  </button>
+</div>
+
+<img
+      src={shadow}
+      alt="Footer Image"
+      style={footerImageStyle}
+    />
+  </div>
+    </div>
   );
 };
 
