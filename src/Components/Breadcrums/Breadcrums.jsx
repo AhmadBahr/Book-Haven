@@ -1,15 +1,17 @@
 import React from 'react'
 import './Breadcrums.css'
-import arrow_icon from '../Assets/breadcrum_arrow.png'
+import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 
 const Breadcrumbs = (props) => {
       const {product} = props;
-  return (
-    <div className='breadcrum'>
-        HOME <img src={arrow_icon} alt="" /> 
-        SHOP <img src={arrow_icon} alt="" /> {product.category} <img src={arrow_icon} alt="" /> {product.name}
-    </div>
-  )
-}
-
-export default Breadcrumbs
+      return (
+        <div className='breadcrumbs-container'>
+        <div style={{ position: 'relative', backgroundColor: '#4A1474', height: '60px' }}>
+          <ArrowBackOutlinedIcon style={{ position: 'absolute', top: '50%', left: '2%', transform: 'translateY(-50%)', fontSize: '25px', color: 'white', marginRight: '5px' }} />
+          <span style={{ position: 'absolute', top: '50%', left: '4%', transform: 'translateY(-50%)', fontSize: '20px', color: 'white' }}>Back</span>
+        </div>
+          </div>
+      );
+    };
+    
+    export default Breadcrumbs;
