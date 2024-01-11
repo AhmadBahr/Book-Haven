@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import filter from '../Assets/filter.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,64 +14,71 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import shadow from '../Assets/shadow_icon.svg'
 
 
-const ProductCard = ({ name, description, imageUrl, price }) => {
+const ProductCard = ({ name, description, imageUrl, price, productId }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isAddedToCart, setIsAddedToCart] = useState(false);
 
   const handleAddToCart = () => {
     setIsAddedToCart(true);
   };
+  
+  const handleProductClick = () => {
+    window.location.href = `/DetailsPage/${productId}`;
+  };
+  
 
   return (
-    <div
-      style={{
-        width: '250px',
-        height: '400px',
-        marginBottom: '20px',
-        borderRadius: '10px',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'relative',
-        boxShadow: isHovered ? '0 4px 8px rgba(0, 0, 0, 0.1)' : 'none',
-      }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    > 
+    <Link to={`/DetailsPage/${productId}`} style={{ textDecoration: 'none' }}>
+      <div
+        style={{
+          width: '250px',
+          height: '400px',
+          marginBottom: '20px',
+          borderRadius: '10px',
+          overflow: 'hidden',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'relative',
+          boxShadow: isHovered ? '0 4px 8px rgba(0, 0, 0, 0.1)' : 'none',
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
       <img src={imageUrl} alt={name} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '10px' }} />
       <h4 style={{ textAlign: 'center', margin: '10px 0' }}>Helium</h4>
       <p style={{ textAlign: 'center', margin: '0 10px' }}>Candy Carson</p>
       <p style={{ color: '#CC2448', fontSize: '18px', textAlign: 'center', marginTop: '10px' }}>{`$6.00`}</p>
 
       {isHovered && !isAddedToCart && (
-        <button
-          onClick={handleAddToCart}
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            background: '#CC2448',
-            color: 'white',
-            borderRadius: '25px',
-            padding: '10px',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            border: '2px solid #CC2448',
-          }}
-        >
-          <ShoppingCartIcon style={{ marginRight: '5px' }} /> Add to Cart
-        </button>
-      )}
-      {isAddedToCart && (
-        <p style={{ position: 'absolute', bottom: '10px', left: '50%', transform: 'translateX(-50%)' }}>
-          Added to Cart!
-        </p>
-      )}
-    </div>
+          <button
+            onClick={handleAddToCart}
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              background: '#CC2448',
+              color: 'white',
+              borderRadius: '25px',
+              padding: '10px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              border: '2px solid #CC2448',
+            }}
+          >
+            <ShoppingCartIcon style={{ marginRight: '5px' }} /> Add to Cart
+          </button>
+        )}
+        {isAddedToCart && (
+          <p style={{ position: 'absolute', bottom: '10px', left: '50%', transform: 'translateX(-50%)' }}>
+            Added to Cart!
+          </p>
+        )}
+      </div>
+    </Link>
   );
 };
 
@@ -103,6 +111,13 @@ const ProductCard = ({ name, description, imageUrl, price }) => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+
+  const productDetails = [
+    { name: 'Product 1', description: 'Description for Product 1', price: 6.00 * 1, imageUrl: Helium_icon },
+    { name: 'Product 2', description: 'Description for Product 2', price: 6.00 * 2, imageUrl: tiffany_icon },
+    { name: 'Product 3', description: 'Description for Product 3', price: 6.00 * 3, imageUrl: felix_icon },
+    { name: 'Product 4', description: 'Description for Product 4', price: 6.00 * 4, imageUrl: lobizona_icon },
+  ];
 
   const containerStyle = {
     backgroundImage: 'url("https://asalapublishers.com/uploads/static_seo_pages/1600x360/asala_about4.jpg")',
@@ -157,6 +172,7 @@ const ProductCard = ({ name, description, imageUrl, price }) => {
     boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
     display: 'flex',
     flexDirection: 'column',
+    zIndex:'1',
   };
 
 	const productContainerStyle = {
@@ -168,22 +184,23 @@ const ProductCard = ({ name, description, imageUrl, price }) => {
 	};
 	
 	const upperProductContainerStyle = {
-		display: 'grid',
-		gridTemplateColumns: 'repeat(4, 1fr)',
-		gap: '10px', 
-		marginBottom: '20px',
-		marginLeft: '35px',
-		marginTop:'30px',
-	};
-	
-	const lowerProductContainerStyle = {
-		display: 'grid',
-		gridTemplateColumns: 'repeat(4, 1fr)',
-		gap: '10px', 
-		marginBottom: '20px',
-		marginLeft: '35px',
-		marginTop:'30px',
-	};
+    display: 'grid',
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    gap: '10px',
+    marginBottom: '10px',  
+    marginLeft: '35px',
+    marginTop: '30px',
+  };
+  
+  const lowerProductContainerStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    gap: '10px',
+    marginLeft: '35px',
+    marginTop: '10px', 
+  };
+  
+  
 	const productImages = [
     Helium_icon,
   	tiffany_icon,
@@ -378,15 +395,14 @@ const footerImageStyle = {
     </div>
 
 
-<div style={{ ...productContainerStyle, ...upperProductContainerStyle }}>
-        {[1, 2, 3, 4].map((product, index) => (
-          <ProductCard
-            key={product}
-            name={`Product ${product}`}
-            description={`Description for Product ${product}`}
-            price={6.00 * product}
-            imageUrl={productImages[index]}
-          />
+    <div style={{ ...productContainerStyle, ...upperProductContainerStyle }}>
+        {productDetails.slice(0, 4).map((product, index) => (
+          <ProductCard key={index} productId={index + 1} {...product} />
+        ))}
+      </div>
+      <div style={{ ...productContainerStyle, ...lowerProductContainerStyle }}>
+        {productDetails.slice(4, 8).map((product, index) => (
+          <ProductCard key={index} productId={index + 5} {...product} />
         ))}
       </div>
 
