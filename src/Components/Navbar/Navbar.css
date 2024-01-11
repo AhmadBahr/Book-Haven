@@ -38,6 +38,20 @@
     border-radius: 10px;
     background-color:#FE4141;
 }
+
+.nav-link {
+    position: relative;
+  }
+  
+  .nav-link hr {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #c60a45; 
+    margin: 0;
+  }
 .nav-login-cart {
     display: flex;
     align-items: center;
