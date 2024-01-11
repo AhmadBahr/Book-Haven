@@ -3,6 +3,7 @@ import './Home.css';
 import banners from '../Assets/banners.svg';
 import boy_1 from '../Assets/boy_1.png';
 import book_stack from '../Assets/book_stack.jpg'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const textUnderImageStyle = {
   fontSize: '25px',
@@ -10,6 +11,45 @@ const textUnderImageStyle = {
   marginTop: '30px',
   color: '#484847',
 };
+
+const featuredBooks = [
+  {
+    name: 'I am not a Boiled Egg',
+    description: 'Candy Carson',
+    price: '$6.00',
+    imageSrc: 'https://static01.nyt.com/images/2018/10/30/books/review/30tinybooks2/merlin_145525644_e5fee950-0474-4af8-b52a-de0c7e7d2a58-superJumbo.jpg',
+    imageAlt: 'Book 1',
+  },
+  {
+    name: 'I am not a Boiled Egg',
+    description: 'Candy Carson',
+    price: '$6.00',
+    imageSrc: 'https://static01.nyt.com/images/2018/10/30/books/review/30tinybooks2/merlin_145525644_e5fee950-0474-4af8-b52a-de0c7e7d2a58-superJumbo.jpg',
+    imageAlt: 'Book 2',
+  },
+  {
+    name: 'I am not a Boiled Egg',
+    description: 'Candy Carson',
+    price: '$6.00',
+    imageSrc: 'https://static01.nyt.com/images/2018/10/30/books/review/30tinybooks2/merlin_145525644_e5fee950-0474-4af8-b52a-de0c7e7d2a58-superJumbo.jpg',
+    imageAlt: 'Book 1',
+  },
+  {
+    name: 'I am not a Boiled Egg',
+    description: 'Candy Carson',
+    price: '$6.00',
+    imageSrc: 'https://static01.nyt.com/images/2018/10/30/books/review/30tinybooks2/merlin_145525644_e5fee950-0474-4af8-b52a-de0c7e7d2a58-superJumbo.jpg',
+    imageAlt: 'Book 1',
+  },
+  {
+    name: 'I am not a Boiled Egg',
+    description: 'Candy Carson',
+    price: '$6.00',
+    imageSrc: 'https://static01.nyt.com/images/2018/10/30/books/review/30tinybooks2/merlin_145525644_e5fee950-0474-4af8-b52a-de0c7e7d2a58-superJumbo.jpg',
+    imageAlt: 'Book 1',
+  },
+  
+];
 
 const Home = () => {
   return (
@@ -113,48 +153,66 @@ const Home = () => {
   <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: '#fff', fontSize: '34px' }}>
     <p>Browse By Stage</p>
 
-<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '241%', left: '-70%', borderBottom: '2px solid'}}>
-    <div style={{ width: '75px', height: '10px', background: '#fff', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
-</div>
-<div style={{ width: '150px', height: '50px', border: '1px solid ', borderRadius: '20px', position: 'absolute', top: '238%', left: '-70%' }}>
-    <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Intermediate Stage</p>
-</div>
+      <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '241%', left: '-70%', borderBottom: '2px solid'}}>
+          <div style={{ width: '75px', height: '10px', background: '#fff', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
+      </div>
+      <div style={{ width: '150px', height: '50px', border: '1px solid ', borderRadius: '20px', position: 'absolute', top: '238%', left: '-70%' }}>
+          <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Intermediate Stage</p>
+      </div>
 
-<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '241%', left: '-70%', borderBottom: '2px solid '}}>
-    <div style={{ width: '75px', height: '10px', background: 'yellow', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
-</div>
-<div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '10px' }}>
-  <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Pre-Primary Stage</p>
-</div>
+      <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '241%', left: '-70%', borderBottom: '2px solid '}}>
+          <div style={{ width: '75px', height: '10px', background: 'yellow', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
+      </div>
+      <div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '10px' }}>
+        <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Pre-Primary Stage</p>
+      </div>
 
-<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '10px' }}>
-<div style={{ width: '75px', height: '10px', background: '#33B6C0', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
-</div>
-<div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '175px' }}></div>
-<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '175px' }}>
-<div style={{ width: '75px', height: '10px', background: '#8DC253', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
-      <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Primary Stage 1st</p>
-    </div>
+      <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '10px' }}>
+      <div style={{ width: '75px', height: '10px', background: '#33B6C0', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
+      </div>
+      <div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '175px' }}></div>
+      <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '175px' }}>
+      <div style={{ width: '75px', height: '10px', background: '#8DC253', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
+            <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Primary Stage 1st</p>
+          </div>
 
-<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '175px' }}></div>
-<div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '330px' }}></div>
-<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '330px' }}>
-<div style={{ width: '75px', height: '10px', background: '#922AA0', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
-      <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Primary Stage 2nd</p>
-    </div>
+      <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '175px' }}></div>
+      <div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '330px' }}></div>
+      <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '330px' }}>
+      <div style={{ width: '75px', height: '10px', background: '#922AA0', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
+            <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Primary Stage 2nd</p>
+          </div>
 
-<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '330px' }}></div>
-<div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '485px' }}></div>
-<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '485px' }}>
-<div style={{ width: '75px', height: '10px', background: '#AF1A1F', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
-      <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Primary Stage 3rd</p>
+      <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '330px' }}></div>
+      <div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '485px' }}></div>
+      <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '485px' }}>
+      <div style={{ width: '75px', height: '10px', background: '#AF1A1F', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
+            <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Primary Stage 3rd</p>
+          </div>
+      <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '485px' }}></div>
+          </div>
+          </div>
+          <div style={{ backgroundColor: '#F7F5F6', padding: '50px', ...textUnderImageStyle }}>
+        <strong>
+          <p style={{ margin: 0 }}>Featured Books</p>
+        </strong>
+
+         <div className="featured-cards-container">
+          {featuredBooks.map((book, index) => (
+            <div key={index} className="featured-card">
+              <img src={book.imageSrc} alt={book.imageAlt} className="featured-image" />
+              <h3>{book.name}</h3>
+              <p>{book.description}</p>
+              <p style={{color:'#CC2448'}}>Price: {book.price}</p>
+              {index === 3 && <button className="add-to-cart-button">   <ShoppingCartOutlinedIcon/>Add to Cart</button>}
+            
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '485px' }}></div>
-     </div>
     </div>
     </div>
-   </div>
-  </div>
   );
 };
 
