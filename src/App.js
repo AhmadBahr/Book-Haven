@@ -6,9 +6,14 @@ import Product from './Pages/Product';
 import Footer from './Components/Footer/Footer';
 import Profile from './Components/Profile/Profile';
 import ContactUs from './Components/Contact/Contact';
-import ShopOurBooks from './Components/ShopOurBooks/ShopOurBooks';
+import ShopOurBooks from './Components/ShopOurBooks/ShopOurBooks' 
 import DetailsPage from './Components/DetailsPage/DetailsPage';
 import Navbar from './Components/Navbar/Navbar';
+import Arabi21 from './Components/Arabi21/Arabi21';
+import About from './Components/About/About';
+import OurCatalogues from './Components/Catalogues/OurCatalogues';
+import Home from './Components/Home/Home';
+
 
 function App() {
   return (
@@ -16,24 +21,19 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-
-          {/* <Route path='/' element={<Shop />} /> */}
-
-          {/* <Route path='/men' element={<ShopCategory banner={banner_mens} category="About Us" />} /> */}
-
-          {/* <Route path='/women' element={<ShopCategory banner={women_banner} category="women" />} /> */}
-
-          {/* <Route path='/kids' element={<ShopCategory banner={kids_banner} category="kid" />} /> */}
-
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<LoginSignup />} />
           <Route path='/Profile' element={<Profile />} />
           <Route path='/Contact-us' element={<ContactUs />} />
-          <Route path='/ShopOurBooks' element={<ShopOurBooks />} />
+          <Route path="/shop" element={<ShopOurBooks />} />
           <Route path="/DetailsPage/*" element={<Product />}>
-          <Route path=":productId" element={<DetailsPage />} />
+            <Route path=":productId" element={<DetailsPage />} />
           </Route>
-        </Routes>
+          <Route path="/Arabi21" element={<Arabi21 />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/OurCatalogues" element={<OurCatalogues />} />
+          <Route path="/Home" element={<Home />} />
+          </Routes>
         <Footer />
       </Router>
     </div>
