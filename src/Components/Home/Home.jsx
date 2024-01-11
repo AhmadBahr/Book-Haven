@@ -121,30 +121,32 @@ const Home = () => {
 </div>
 
 <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '241%', left: '-70%', borderBottom: '2px solid '}}>
-    <div style={{ width: '75px', height: '10px', background: '#fff', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
+    <div style={{ width: '75px', height: '10px', background: 'yellow', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
+</div>
+<div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '10px' }}>
+  <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Pre-Primary Stage</p>
 </div>
 
-
-<div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '10px' }}>
-      <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Pre-Primary Stage</p>
-    </div>
-<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '10px' }}></div>
-
-
+<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '10px' }}>
+<div style={{ width: '75px', height: '10px', background: '#33B6C0', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
+</div>
 <div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '175px' }}></div>
 <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '175px' }}>
+<div style={{ width: '75px', height: '10px', background: '#8DC253', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
       <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Primary Stage 1st</p>
     </div>
 
 <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '175px' }}></div>
 <div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '330px' }}></div>
 <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '330px' }}>
+<div style={{ width: '75px', height: '10px', background: '#922AA0', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
       <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Primary Stage 2nd</p>
     </div>
-<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '330px' }}></div>
 
+<div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '330px' }}></div>
 <div style={{ width: '150px', height: '50px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '485px' }}></div>
 <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '485px' }}>
+<div style={{ width: '75px', height: '10px', background: '#AF1A1F', position: 'absolute', top: '92%', left: '52%', transform: 'translate(-50%, -50%)', borderRadius:'3px' }}></div>
       <p style={{ margin: 0, textAlign: 'center', fontSize: '15px', marginTop: '15px' }}>Primary Stage 3rd</p>
     </div>
 <div style={{ width: '150px', height: '60px', border: '1px solid #fff', borderRadius: '20px', position: 'absolute', top: '230%', left: '-18%', marginLeft: '485px' }}></div>
