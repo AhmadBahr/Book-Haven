@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import './Navbar.css';
 import cart_icon from '../Assets/cart_icon.png';
-import { Link } from 'react-router-dom';
 import { ShopContext } from '../Context/ShopContext';
 import hamburger_icon from '../Assets/hamburger_icon.png';
 import arabi21_icon from '../Assets/arabi21_icon.jpg'
@@ -9,6 +8,8 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import LanguageIcon from '@mui/icons-material/Language';
 import SearchIcon from '@mui/icons-material/Search';
 import PhoneInTalkOutlinedIcon from '@mui/icons-material/PhoneInTalkOutlined';
+import { Link, useLocation } from 'react-router-dom';
+
 
 const AdditionalNavbar = () => {
   return (
@@ -42,7 +43,11 @@ const AdditionalNavbar = () => {
 export const Navbar = () => {
   const [menu, setMenu] = useState('Shop');
   const { getTotalCartItems } = useContext(ShopContext);
+  const location = useLocation();
 
+  const isActive = (pathname) => {
+    return location.pathname === pathname;
+  };
   return (
     <>
       <AdditionalNavbar></AdditionalNavbar>
@@ -53,26 +58,50 @@ export const Navbar = () => {
             <img src={hamburger_icon} alt="" style={{ width: '36px', height: '36px', color: '#c60a45' }} />
           </div>
         </div>
-        <img src="https://asalapublishers.com/assets/img/logo.png" alt="" style={{ width: '50px', height: '50px', marginRight: '5px' }} />
+        <Link to='/Home'>
+          <img src="https://asalapublishers.com/assets/img/logo.png" alt="" style={{ width: '50px', height: '50px', marginRight: '5px' }} />
+        </Link>
         <ul className='nav-menu'>
-          <li onClick={() => { setMenu("about") }}>
-            <Link style={{ textDecoration: 'none' }} to='/about'>About Us</Link>{menu === "about" ? <hr /> : <></>}
+          <li>
+            <Link style={{ textDecoration: 'none' }} to='/about'>
+              <div className={isActive('/about') ? 'nav-link active' : 'nav-link'}>
+                About Us
+                {isActive('/about') && <hr />}
+              </div>
+            </Link>
           </li>
-          <li onClick={() => { setMenu("shop") }}>
-            <Link style={{ textDecoration: 'none' }} to='/shop'>Shop for Books</Link>{menu === "shop" ? <hr /> : <></>}
+          <li>
+            <Link style={{ textDecoration: 'none' }} to='/shop'>
+              <div className={isActive('/shop') ? 'nav-link active' : 'nav-link'}>
+                Shop our Books
+                {isActive('/shop') && <hr />}
+              </div>
+            </Link>
           </li>
-          <li onClick={() => { setMenu("catalogs") }}>
-            <Link style={{ textDecoration: 'none' }} to='/catalogs'>Our Catalogues</Link>{menu === "catalogs" ? <hr /> : <></>}
+          <li>
+            <Link style={{ textDecoration: 'none' }} to='/OurCatalogues'>
+              <div className={isActive('/OurCatalogues') ? 'nav-link active' : 'nav-link'}>
+                Our Catalogues
+                {isActive('/OurCatalogues') && <hr />}
+              </div>
+            </Link>
           </li>
-          <li onClick={() => { setMenu("contact") }}>
-            <Link style={{ textDecoration: 'none' }} to='/contact'>Contact Us</Link>{menu === "contact" ? <hr /> : <></>}
+          <li>
+            <Link style={{ textDecoration: 'none' }} to='/Contact-us'>
+              <div className={isActive('/Contact-us') ? 'nav-link active' : 'nav-link'}>
+                Contact Us
+                {isActive('/Contact-us') && <hr />}
+              </div>
+            </Link>
           </li>
-          <li onClick={() => { setMenu("arabi") }}>
-          <a style={{ textDecoration: 'none' }} href='/arabi21'>
-            <img src={arabi21_icon} alt='Arabi 21' style={{ width: '50px', height: '50px' }}  />
-          </a>
-          {menu === "arabi" ? <hr /> : <></>}
-        </li>
+          <li>
+            <Link style={{ textDecoration: 'none' }} to='/arabi21'>
+              <div className={isActive('/arabi21') ? 'nav-link active' : 'nav-link'}>
+                <img src={arabi21_icon} alt='Arabi 21' style={{ width: '50px', height: '50px' }} />
+                {isActive('/arabi21') && <hr />}
+              </div>
+            </Link>
+          </li>
         </ul>
         <div className="nav-login-cart">
         <Link to='/login'><button>Login</button></Link>
@@ -91,7 +120,7 @@ export const Navbar = () => {
             <img
               src="https://t4.ftcdn.net/jpg/03/42/99/71/360_F_342997143_wz7x1yR7KWhmhSKF9OHwuQ2W4W7IUDvH.jpg"
               alt="Profile"
-              style={{ cursor: 'pointer', width: '50px', height: '50px' }}
+              style={{ cursor: 'pointer', width: '50px', height: '50px',marginBottom:'1px' }}
             />
             </Link>
       </div>
@@ -99,4 +128,5 @@ export const Navbar = () => {
     </>
   );
 };
+
 export default Navbar;
