@@ -54,6 +54,25 @@ const featuredBooks = [
   
 ];
 
+const newBooks = [
+  {
+    name: 'I am not Boiled Egg',
+    description: 'This delightful book is the latest in the series of Ladybird books in the books which have been specially planned to help grown-ups',
+    author: 'Candy Carson',
+    price: '$19.99',
+    imageSrc: ('https://images.ctfassets.net/lzny33ho1g45/55zO1LTzOAAOOb84AhlFD5/7b0646696528f97b12efc5c13b0e9f71/Small_business_books.png'), 
+    imageAlt: 'Book 1 Alt Text',
+  },
+  {
+    name: 'I am not Boiled Egg',
+    description: 'This delightful book is the latest in the series of Ladybird books in the books which have been specially planned to help grown-ups',
+    author: 'Candy CArson',
+    price: '$19.99',
+    imageSrc: ('https://images.ctfassets.net/lzny33ho1g45/55zO1LTzOAAOOb84AhlFD5/7b0646696528f97b12efc5c13b0e9f71/Small_business_books.png'), 
+    imageAlt: 'Book 2 Alt Text',
+  },
+];
+
 const Home = () => {
   return (
     <div>
@@ -221,17 +240,40 @@ const Home = () => {
         {index === 1 && book.isOnSale && (
           <div className="sale-text-box">Sale!</div>
         )}
-          
       </div>
     ))}
     <ArrowForwardIosOutlinedIcon style={{ fontSize: '50px', marginTop:'150px' }} />
+      </div>
+     </div>
 
-  
-
+     <strong>
+    <p style={{ margin: 0, fontSize:'30px' }}>New Books</p>
+  </strong>
+     <div style={{ marginTop: '50px', display: 'flex', flexDirection: 'row' }}>
+  <div className="new-books-container" style={{ display: 'flex', flexDirection: 'row', overflowX: 'auto' }}>
+    {newBooks.slice(0, 2).map((book, index) => (
+      <div key={index} className="new-book-card" style={{ display: 'flex', flexDirection: 'row', marginRight: '20px' }}>
+        <div className="new-book-image-container">
+          <img src={book.imageSrc} alt={book.imageAlt} className="new-book-image" />
+        </div>
+        <div className="new-book-details" style={{ marginLeft: '20px' }}>
+          <h3>{book.name}</h3>
+          <p>{book.description}</p>
+          <p>Author: {book.author}</p>
+          <p style={{ color: '#CC2448' }}>Price: {book.price}</p>
+          <button className="add-to-cart-button">
+            <ShoppingCartOutlinedIcon /> ADD TO CART
+          </button>
+          {book.isOnSale && (
+            <div className="sale-text-box">Sale!</div>
+          )}
+        </div>
+      </div>
+    ))}
   </div>
 </div>
-    </div>
-    </div>
+      </div>
+     </div>
     </div>
   );
 };
