@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import banners from '../Assets/banners.svg';
 import boy_1 from '../Assets/boy_1.png';
+import book_stack from '../Assets/book_stack.jpg'
 
 const textUnderImageStyle = {
   fontSize: '25px',
@@ -36,8 +37,11 @@ const Home = () => {
         <strong>
           <p>Shop By Categories </p>
         </strong>
+       
+        <div className="color-boxes-and-image-container">
         <div className="color-boxes-container">
           <div className="color-box red">
+          <div className="arrow left">&lt;</div>
             <div className="circle-top"></div>
             <div className="circle-image">
               <img
@@ -55,6 +59,7 @@ const Home = () => {
           <div className="color-box green">
             <div className="circle-top"></div>
             <div className="circle-image">
+
               <img
                 src="https://www.creativefabrica.com/wp-content/uploads/2020/03/08/books-in-circle-icon-Graphics-3393265-1.jpg"
                 alt="Arabic Grammar"
@@ -82,24 +87,37 @@ const Home = () => {
             </div>
             <strong><p className="box-text">Activities</p></strong>
           </div>
-          <div className="color-box yellow">
+          
+          <div className="color-box yellow"> 
+          <strong><p className="box-text">Reading Series</p></strong>
             <div className="circle-top"></div>
             <div className="circle-image">
             <img
-                src="https://www.creativefabrica.com/wp-content/uploads/2020/03/08/books-in-circle-icon-Graphics-3393265-1.jpg"
-                alt="Arabic Grammar"
-                style={{ width: '140%',
-                height: '140%',
-                borderRadius: '50%',
-                objectFit: 'cover',
-                margin: '-60px auto 30px -9px', }}
-              />
-            </div>
-            <strong><p className="box-text">Reading Series</p></strong>
-          </div>
+            src="https://www.creativefabrica.com/wp-content/uploads/2020/03/08/books-in-circle-icon-Graphics-3393265-1.jpg"
+            alt="Arabic Grammar"
+            style={{
+              width: '140%',
+              height: '140%',
+              borderRadius: '50%',
+              objectFit: 'cover',
+              margin: '-60px auto 30px -9px',
+            }}
+          />
         </div>
+        <div className="arrow right">&gt;</div>
       </div>
     </div>
+
+    <div style={{ position: 'relative' }}>
+  <img src={book_stack} style={{ width: '100%', marginTop: '20px' }} alt="Book Stack" />
+  <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: '#fff', fontSize: '34px' }}>
+    <p>Browse By Stage</p>
+    <div style={{ width: '150px', height: '50px', backgroundColor: '#fff', borderRadius: '20px', position: 'absolute', bottom: '-30px', left: '50%', transform: 'translateX(-50%)' }}></div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
   );
 };
 
