@@ -95,7 +95,6 @@
     display: flex;
     justify-content: center;
     margin-top: 55px;
-
   }
   
   .color-box {
@@ -168,3 +167,20 @@
   .yellow {
     background-color: #E6C979;
   }
+
+  .arrow {
+  font-size: 36px;  
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left {
+  left: -29px;
+}
+
+.right {
+  right: -29px;
+}
+
