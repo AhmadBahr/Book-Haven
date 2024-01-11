@@ -94,7 +94,7 @@ const ContactUs = () => {
         <h2 style={titleStyle} className="title">
           Contact Us
         </h2>
-        <div style={{ marginLeft: '260px', fontSize: '15px' }}>Home . Contact</div>
+        <div style={{ marginLeft: '710px', fontSize: '15px' }}>Home . Contact</div>
       </div>
 
       <div style={findUsContainerStyle} className="find-us-container">
@@ -216,6 +216,7 @@ const ContactUs = () => {
             width: '100%',
             borderRadius: '8px',
             marginTop: '-63px',
+            transform: 'rotate(-deg)',
   }}
 />
             </div>
