@@ -229,3 +229,16 @@
   right: 20px;
   border-radius: 25px;
 }
+
+.new-book-image {
+  width: 500px; 
+  height: auto; 
+  border-radius: 10px;
+}
+
+.add-to-cart-buttons{
+  background-color: #CC2448;
+  border-radius: 25px;
+  border: none;
+  color: #fff;
+}
