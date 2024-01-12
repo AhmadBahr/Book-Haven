@@ -71,13 +71,14 @@
     color: #CC2448;
     font-size: 15px;
     font-weight: 500;
-    margin-left: 250px;
+    margin-left: 300px;
+    opacity: 0.2s;
   }
   
 
 .loginsignup-login {
     margin-top: 15px;
-    color: rgba(204, 36, 72, 0.7);
+    color: white(204, 36, 72, 0.7);
     font-size: 15px;
     font-weight: 500;
     margin-right: 400px;
