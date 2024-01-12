@@ -6,6 +6,9 @@ import book_stack from '../Assets/book_stack.jpg'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ArrowBackIosOutlinedIcon from '@mui/icons-material/ArrowBackIosOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
+import '../NewsLetter/NewsLetter.jsx'
+import NewsLetter from '../NewsLetter/NewsLetter.jsx';
+
 
 const textUnderImageStyle = {
   fontSize: '25px',
@@ -59,15 +62,15 @@ const newBooks = [
     name: 'I am not Boiled Egg',
     description: 'This delightful book is the latest in the series of Ladybird books in the books which have been specially planned to help grown-ups',
     author: 'Candy Carson',
-    price: '$19.99',
+    price: '$6.00',
     imageSrc: ('https://images.ctfassets.net/lzny33ho1g45/55zO1LTzOAAOOb84AhlFD5/7b0646696528f97b12efc5c13b0e9f71/Small_business_books.png'), 
     imageAlt: 'Book 1 Alt Text',
   },
   {
     name: 'I am not Boiled Egg',
     description: 'This delightful book is the latest in the series of Ladybird books in the books which have been specially planned to help grown-ups',
-    author: 'Candy CArson',
-    price: '$19.99',
+    author: 'Candy Carson',
+    price: '$6.00',
     imageSrc: ('https://images.ctfassets.net/lzny33ho1g45/55zO1LTzOAAOOb84AhlFD5/7b0646696528f97b12efc5c13b0e9f71/Small_business_books.png'), 
     imageAlt: 'Book 2 Alt Text',
   },
@@ -246,35 +249,66 @@ const Home = () => {
       </div>
      </div>
 
-     <strong>
-    <p style={{ margin: 0, fontSize:'30px' }}>New Books</p>
-  </strong>
+          <strong>
+          <p style={{ margin: 0, fontSize: '30px' }}>New Books</p>
+        </strong>
      <div style={{ marginTop: '50px', display: 'flex', flexDirection: 'row' }}>
-  <div className="new-books-container" style={{ display: 'flex', flexDirection: 'row', overflowX: 'auto' }}>
-    {newBooks.slice(0, 2).map((book, index) => (
-      <div key={index} className="new-book-card" style={{ display: 'flex', flexDirection: 'row', marginRight: '20px' }}>
-        <div className="new-book-image-container">
-          <img src={book.imageSrc} alt={book.imageAlt} className="new-book-image" />
+        <div className="new-books-container" style={{ display: 'flex', flexDirection: 'row', overflowX: 'auto' }}>
+          {newBooks.slice(0, 2).map((book, index) => (
+            <div key={index} className="new-book-card" style={{ display: 'flex', flexDirection: 'row', marginRight: '20px' }}>
+              <div className="new-book-image-container">
+                <img src={book.imageSrc} alt={book.imageAlt} className="new-book-image" />
+              </div>
+              <div className="new-book-details" style={{ marginLeft: '20px', fontSize:'14px' }}>
+                <h3>{book.name}</h3>
+                <br></br>
+                <p>{book.description}</p>
+                <br></br>
+                <p>{book.author}</p>
+                <br />
+                <p style={{ color: '#CC2448', fontWeight: 'bold', fontSize: '20px' }}>{book.price}</p>
+                  <button className="add-to-cart-buttons" style={{ color: '#fff', marginTop: '10px',fontSize:'20px' }}>
+                  <ShoppingCartOutlinedIcon />ADD TO CART
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="new-book-details" style={{ marginLeft: '20px' }}>
-          <h3>{book.name}</h3>
-          <p>{book.description}</p>
-          <p>Author: {book.author}</p>
-          <p style={{ color: '#CC2448' }}>Price: {book.price}</p>
-          <button className="add-to-cart-button">
-            <ShoppingCartOutlinedIcon /> ADD TO CART
-          </button>
-          {book.isOnSale && (
-            <div className="sale-text-box">Sale!</div>
-          )}
+       </div>
+
+      <div style={{ marginTop: '100px', display: 'flex', flexDirection: 'row' }}>
+        <div style={{ marginRight: '20px', textAlign: 'center' }}>
+          <div style={{ position: 'relative' }}>
+            <img
+              src="https://cdn.create.vista.com/downloads/7891168d-4278-4ed0-b391-6be20532b842_1024.jpeg"
+              alt="First Image Alt Text"
+              style={{ width: '93%', height: 'auto', borderRadius:'35px' }}
+            />
+            <p style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'black', fontSize: '38px', fontWeight:'bold' }}>
+              Promotions and Discounted books
+            </p>
+          </div>
         </div>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{ position: 'relative' }}>
+            <img
+              src="https://c8.alamy.com/comp/2CFYYN3/miami-floridacoral-gables-barnes-noble-bookstorebook-books-clearance-sign-50-discount-off-discounted-salehalf-price-display-promotion-promotions-2CFYYN3.jpg"
+              alt="Second Image Alt Text"
+              style={{ width: '97%', height: 'auto', borderRadius:'35px' }}
+            />
+            <p style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'black', fontSize: '58px',fontWeight:'bold' }}>
+             Best Seller Books 2022
+            </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      <div>
+        {/* Import and render the Newsletter component */}
+      <NewsLetter/>
       </div>
-    ))}
-  </div>
-</div>
       </div>
-     </div>
-    </div>
+      </div>
   );
 };
 
