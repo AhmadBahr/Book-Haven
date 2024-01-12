@@ -148,8 +148,8 @@
     display: flex;
     flex-wrap: wrap; 
     opacity: 0.5;
-    grid-template-columns: 1fr; /* Single column for simplicity */
-    gap: 20px; /* Adjust as needed */
+    grid-template-columns: 1fr;
+    gap: 20px; 
   }
   
   .author-info,
