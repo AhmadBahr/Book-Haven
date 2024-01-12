@@ -4,6 +4,8 @@ import { ShopContext } from '../Context/ShopContext';
 import remove_icon from '../Assets/cart_cross_icon.png';
 import all_product from '../Assets/all_product';
 import shadow from '../Assets/shadow_icon.svg'
+import { useNavigate } from 'react-router-dom';
+
 
 
 const CartHeader = () => (
@@ -27,6 +29,9 @@ const CartItems = () => {
     removeFromCart,
   } = useContext(ShopContext);
 
+  const navigate = useNavigate();
+
+
   const footerImageStyle = {
     position: 'relative',
       bottom: '70px',
@@ -45,8 +50,7 @@ const CartItems = () => {
           <p>Price</p>
           <p>Quantity</p>
         </div>
-   <hr style={{marginTop: '50px',
-    marginLeft: '-410px'}}/>
+   <hr style={{marginTop: '-27px', width:'355px'}}/>
         {all_product.map((e) => {
           if (cartItems[e.id] > 0) {
             return (
@@ -54,7 +58,6 @@ const CartItems = () => {
                 <div className="cartitems-format cartitems-format-main">
                   <img src={e.image} alt="" className='carticon-product-icon' />
                   <p>{e.name}</p>
-                  <p>${e.new_price}</p>
                   <button className='cartitems-quantity'>{cartItems[e.id]}</button>
                   <p>${e.new_price * cartItems[e.id]}</p>
                   <img
@@ -101,7 +104,12 @@ const CartItems = () => {
           </div>
          </div>
         </div>
-         <button className="btn-contiueshopping">CONTINUE SHOPPING</button>
+        <button
+        className="btn-continue-shopping" 
+        onClick={() => navigate('/shop')} 
+      >
+        CONTINUE SHOPPING
+      </button>
          <hr className="small-hr" />
 
          <div className="image-container">
