@@ -1,17 +1,19 @@
-import React from 'react'
-import'./NewsLetter.css'
+import React from 'react';
+import './NewsLetter.css';
 
 const NewsLetter = () => {
   return (
-    <div className='newsletter'>
-        <h1>Get Exclusive Offers On Your Email</h1>
-        <p>Subscribe to our Newsletter and stay updated</p>
+    <div className="newsletter-container">
+      <div className="rectangle">
+      <h1 className="newsletter-header">Newsletter</h1>
+      <p className="newsletter-text">Subscribe to our newsletter and get the latest updates!</p>
         <div>
-            <input type="email" placeholder='Your Email id'/>
-            <button>Subscribe</button>
+          <input type="email" placeholder='Enter your Email' />
+          <button>Subscribe</button>
         </div>
-        </div>
+      </div>
+    </div>
   )
 }
 
-export default NewsLetter
+export default NewsLetter;
