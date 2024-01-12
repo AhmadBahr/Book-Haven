@@ -19,7 +19,7 @@ const LoginSignup = () => {
           <input type="password" id="password" placeholder='' />
         </div>
         <p className="loginsignup-login">
-          <span to="/login">Forgot my password?</span>
+          <span to="/login">Forgot&nbsp;my&nbsp;password?</span>
         </p>
         <div className="loginsignup-agree">
           <input type="checkbox" name='' id='' />
