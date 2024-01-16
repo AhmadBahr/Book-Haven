@@ -1,11 +1,12 @@
 import React from 'react';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
-import library1 from '../Assets/library2.jpg';
-import library2 from '../Assets/library2.jpg';
-import library_3 from '../Assets/library_3.PNG';
-import library4 from '../Assets/library4.PNG';
-import library5 from '../Assets/library5.jpg';
-import library6 from '../Assets/library6.PNG';
+import about_5 from '../Assets/about_05.jpg';
+import boook_icon from '../Assets/boook_icon.png';
+import book_icon from '../Assets/book_icon.png';
+import about_5s from '../Assets/about_05.jpg';
+import abouts_5 from '../Assets/about_05.jpg';
+import bookss_icon from '../Assets/about_05.jpg';
+
 
 const imageContainerStyle = {
   position: 'relative',
@@ -97,7 +98,7 @@ const circleStyle = {
 
 const pdfImageURL = 'https://asalapublishers.com/assets/img/pdf.svg';
 
-const imageArray = [library1, library2, library_3, library4, library5, library6];
+const imageArray = [about_5, boook_icon, book_icon, about_5s, abouts_5, bookss_icon];
 
 const OurCatalogues = () => {
   return (
@@ -136,7 +137,7 @@ const OurCatalogues = () => {
           ))}
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'space-around', width: '100%' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-around', width: '100%', marginTop:'100px' }}>
         
           {imageArray.slice(3).map((image, index) => (
             <div key={index + 3} style={{ ...imageCardStyle, backgroundImage: `url(${imageArray[index + 3]})`, width: '30%' }}>
