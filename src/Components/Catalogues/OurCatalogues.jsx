@@ -72,7 +72,7 @@ const downloadButtonStyle = {
   marginLeft: '-20px',
 };
 
-const iconStyle = {
+const iconStyle= {
   marginRight: '8px',
 };
 
