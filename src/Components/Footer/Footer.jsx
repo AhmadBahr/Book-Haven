@@ -1,159 +1,157 @@
-.section__padding {
-  padding: 2rem 2rem;
-  color: #484847;
-  width: 50%;
-  margin: 0 auto;
-}
+import React from "react";
+import "./Footer.css";
+import facebook_icon from "../Assets/facebook_icon.png";
+import instagram_icon from "../Assets/instagram_icon.png";
+import pinterest_icon from "../Assets/pintester_icon.png";
+import twitter_icon from "../Assets/twitter.png";
+import american_express_logo from "../Assets/american-express.png";
 
-.footer {
-  background: white;
-  width: 100%;
-}
+const Footer = () => {
+  return (
+    <div className="footer">
+      <div className="sb__footer section__padding">
+        <div className="sb__footer-links">
+          <div className="sb__footer-section">
+            <h4>CUSTOMER</h4>
+            <a href="/Login / Register">
+              <p>Login / Register</p>
+            </a>
+            <a href="/My Acount">
+              <p>My Account</p>
+            </a>
+            <a href="/Terms & Condtions">
+              <p>Terms & Conditions</p>
+            </a>
+          </div>
 
-.sb__footer {
-  display: flex;
-  flex-direction: column;
-}
+          <div className="sb__footer-section">
+            <h4>QUICK LINKS</h4>
+            <a href="/Explore Books">
+              <p>Explore Books</p>
+            </a>
+            <a href="/About Asala">
+              <p>About Asala</p>
+            </a>
+            <a href="/View Catalog">
+              <p>View Catalog</p>
+            </a>
+          </div>
 
-.sb__footer-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  text-align: left;
-  margin-top: 0.5rem;
-}
+          <div className="sb__footer-section">
+            <h4>SOCIAL MEDIA</h4>
+            <div className="socialmedia">
+              <p style={{ marginRight: "10px" }}>
+                <img
+                  src={facebook_icon}
+                  alt=""
+                  style={{ width: "30px", height: "30px" }}
+                />
+              </p>
+              <p style={{ marginRight: "10px" }}>
+                <img
+                  src={pinterest_icon}
+                  alt=""
+                  style={{ width: "30px", height: "30px" }}
+                />
+              </p>
+              <p style={{ marginRight: "10px" }}>
+                <img
+                  src={instagram_icon}
+                  alt=""
+                  style={{ width: "30px", height: "30px" }}
+                />
+              </p>
+              <p>
+                <img
+                  src={twitter_icon}
+                  alt=""
+                  style={{ width: "30px", height: "30px" }}
+                />
+              </p>
+            </div>
+          </div>
+          <div className="sb__footer-section">
+            <h4>CALL US</h4>
+            <a href="/Beirut">
+              <p style={{ color: "#cc2448", textDecoration: "none" }}>Beirut</p>
+              <p style={{ color: "#cc2448", textDecoration: "underline" }}>
+                <a
+                  href="tel:+9611833217"
+                  style={{
+                    color: "darkpink",
+                    fontWeight: "bold",
+                    textDecoration: "none",
+                    borderBottom: "2px solid darkpink",
+                  }}
+                >
+                  +961 1 83 32 17
+                </a>
+              </p>
+            </a>
+            <a href="/Istanbul">
+              <p style={{ color: "#cc2448", textDecoration: "none" }}>
+                Istanbul
+              </p>
+              <p style={{ color: "#cc2448", textDecoration: "underline" }}>
+                <a
+                  href="tel:+9611833217"
+                  style={{
+                    color: "#cc2448",
+                    fontWeight: "bold",
+                    textDecoration: "none",
+                    borderBottom: "2px solid darkpink",
+                  }}
+                >
+                  +961 1 83 32 17
+                </a>
+              </p>
+            </a>
+          </div>
+        </div>
+        <hr style={{ color: "grey", margin: "10px 0" }} />
+        <div className="sb__footer-below">
+          <div className="sb__footer-copyright">
+            <p>
+              Copyright &#169; {new Date().getFullYear()} Asala Publishers. All
+              rights reserved
+            </p>
+          </div>
+          <div className="sb__footer-below-links">
+            <p>
+              <a href="/Payment">Payment</a>
+            </p>
+            <div className="payment-methods">
+              <img
+                src="https://asalapublishers.com/assets/img/f1.svg"
+                alt="MoneyGram Logo"
+              />
+              <img
+                src="https://asalapublishers.com/assets/img/f2.svg"
+                alt="Western Union Logo"
+              />
+              <img
+                src="https://asalapublishers.com/assets/img/f3.svg"
+                alt="Visa Logo"
+              />
+              <img
+                src="https://asalapublishers.com/assets/img/f4.svg"
+                alt="MasterCard Logo"
+              />
+              <img
+                src="https://asalapublishers.com/assets/img/f5.svg"
+                alt="Discover Logo"
+              />
+              <img
+                src={american_express_logo}
+                alt="American Express Logo"
+                style={{ width: "40px", height: "auto" }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-.sb__footer-links_div {
-  width: 70px;
-  margin: 0.5rem;
-  padding: 0;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  color: #484847;
-}
-
-a {
-  color: #484847;
-  text-decoration: none;
-}
-
-.socialmedia {
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-}
-
-.socialmedia img {
-  width: 80%;
-}
-
-.sb__footer-links_div h4 {
-  font-size: 14px;
-  line-height: 17px;
-  margin-bottom: 0.3rem 0;
-}
-
-.sb__footer-links_div p {
-  font-size: 12px;
-  line-height: 15px;
-  margin: 0.3rem 0;
-  cursor: pointer;
-}
-
-.sb__footer-below {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 0.2rem;
-}
-
-.sb__footer-below-links {
-  display: flex;
-  flex-direction: row;
-
-}
-
-.sb__footer-below-links p {
-  font-size: 13px;
-  line-height: 15px;
-  margin-left: 2rem;
-  color: #484847;
-  font-weight: 600;
-  margin-top: 7px;
-}
-
-hr {
-  color: #484847;
-  width: 100%;
-}
-
-.sb__footer-copyright p {
-  font-size: 13px;
-  line-height: 15px;
-  color: #484847;
-  font-weight: 600;
-}
-
-.sb__footer-section {
-  margin-bottom: 10px;
-}
-
-.payment-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.payment-text {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.payment-methods {
-  display: flex;
-  justify-content: center;
-  height: 30px;
-}
-
-@media screen and (max-width: 850px) {
-  .sb__footer-heading h1 {
-    font-size: 44px;
-    line-height: 5px;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .sb__footer-heading h1 {
-    font-size: 34px;
-    line-height: 42px;
-  }
-  .sb__footer-below-links div {
-    margin: 1rem 0;
-  }
-  .sb__footer-btn p {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .sb__footer-below {
-    flex-direction: column;
-    justify-content: left;
-  }
-
-  .sb__footer-below-links {
-    flex-direction: column;
-  }
-  .sb__footer-below-links p {
-    margin-left: 0rem;
-    margin-top: 1rem;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .sb__footer-heading h1 {
-    font-size: 27px;
-    line-height: 38px;
-  }
-}
+export default Footer;
