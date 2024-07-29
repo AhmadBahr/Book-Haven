@@ -8,7 +8,7 @@ import Profile from './Components/Profile/Profile';
 import ContactUs from './Components/Contact/Contact';
 import ShopOurBooks from './Components/ShopOurBooks/ShopOurBooks' 
 import DetailsPage from './Components/DetailsPage/DetailsPage';
-import Navbar from './Components/Navbar/Navbar';
+import Navbar from './Components/Navbar/Updated Navbar';
 import Arabi21 from './Components/Arabi21/Arabi21';
 import About from './Components/About/About';
 import OurCatalogues from './Components/Catalogues/OurCatalogues';
